@@ -1,0 +1,58 @@
+let mapleader=" "
+
+map <leader>. :vsc View.QuickActions<CR>
+
+nmap <leader>rt :vsc TestExplorer.RunAllTestsInContext<CR>
+nmap <leader>ra :vsc TestExplorer.RunAllTests<CR>
+nmap <leader>rT :vsc TestExplorer.DebugAllTestsInContext<CR>
+
+nmap <leader>yp :vsc File.CopyFullPath<CR>
+
+nmap <leader>sf :vsc Edit.GoToFile<CR>
+nmap <leader>sg :vsc Edit.FindinFiles<CR>
+
+nmap gr :vsc Edit.FindAllReferences<CR>
+nmap gI :vsc Edit.GoToImplementation<CR>
+
+nmap <leader>f :vsc Edit.FormatDocument<CR>
+
+nmap K :vsc Edit.QuickInfo<CR>
+
+nmap ]d :vsc Edit.GoToNextIssueinFile<CR>
+nmap [d :vsc Edit.GoToPreviousIssueinFile<CR>
+
+"This is the same as the comment-nvim mappings.
+nmap gcc :vsc Edit.ToggleLineComment<CR>
+nmap gbc :vsc Edit.ToggleBlockComment<CR>
+vmap gc :vsc Edit.ToggleLineComment<CR>
+vmap gb :vsc Edit.ToggleBlockComment<CR>
+
+nmap <C-O> :vsc View.NavigateBackward<CR>
+nmap <C-I> :vsc View.NavigateForward<CR>
+
+nmap <leader>rn :vsc Refactor.Rename<CR>
+map <leader>rm :vsc Refactor.ExtractMethod<CR>
+
+"remaps
+map <leader>d "_d
+map <leader>c "_c
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+"vsvim does not support zv so neither of these have the zv that we have in the
+"init .lua
+nmap n nzz
+nmap N Nzz
+
+"sets
+set clipboard=unnamed
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set scrolloff=10
+"this is amazing.... it will turn the hlsearch off when you are all done. 
+set hlsearch
+nmap <Esc> :nohlsearch<CR>
+
+"test
+"something else
