@@ -1,0 +1,12 @@
+{
+  "id": "a8a6fde2-7989-4222-9d41-3d328126597c",
+  "prefix": "FDM",
+  "description": "Find DataField Monker",
+  "body": "--Finds where Datafields live in either screens or in the path.\r\nDECLARE @DataFieldMoniker VARCHAR(100)\r\n\r\n--------------------------------- Enter Either Moniker of DataFiledID\r\nSET @DataFieldMoniker = '$Moniker$'\r\n---------------------------------\r\n\r\n--Finds Datafield on Path Task\r\nSELECT\r\n\trt.Name AS [Path],\r\n\trt.RoadmapTemplateId AS [PathId],\r\n    tiCatagory.Label AS [Catagory],\r\n    tiTask.Label AS [Task],\r\n    tr.TaskRule AS [TaskRule],\r\n    tiDFL.Label AS [DataFiledLabel],\r\n    df.DataFieldId,\r\n    df.FieldDescription\r\nFROM\r\n    dbo.DataField df\r\n    LEFT JOIN dbo.TemplateItem tiDFL ON tiDFL.TypeId = df.DataFieldId\r\n    LEFT JOIN dbo.TemplateItem tiTask ON tiTask.TemplateItemId = tiDFL.ParentItem\r\n    LEFT JOIN dbo.Task t ON t.TaskId = tiTask.TypeId\r\n    LEFT JOIN dbo.TaskRule tr ON tr.TaskRuleId = t.TaskRuleId\r\n    LEFT JOIN dbo.TemplateItem tiCatagory ON tiCatagory.TemplateItemId = tiTask.ParentItem\r\n\tLEFT JOIN dbo.RoadmapTemplate rt ON rt.RoadmapTemplateId = tiDFL.RoadmapTemplateId\r\nWHERE\r\n    df.FieldMoniker = @DataFieldMoniker\r\n    AND tiDFL.Type = 'DataField'\r\n\r\n--Find Moniker on Dynamic Screens\r\n--Note is Path/Category/Task are null that means the screen probably appears ourside the path\r\nSELECT\r\n\trt.Name AS [Path],\r\n\trt.RoadmapTemplateId AS [PathId],\r\n\ttiPT.Label AS [Category],\r\n\ttiPS.Label AS [Task],\r\n    s.Description AS [ScreenDescription],\r\n    s.Title AS [ScreenTitle],\r\n\ts.ScreenId,\r\n    so.ClientName AS [ScreenOwner]\r\nFROM\r\n    dbo.ScreenFieldAssociation sfa\r\n    LEFT JOIN dbo.Screen s ON s.ScreenId = sfa.ScreenId\r\n    LEFT JOIN dbo.ScreenOwner so ON so.ScreenId = s.ScreenId\r\n\tLEFT JOIN dbo.TemplateItem tiS ON tiS.TypeId = s.ScreenId AND tiS.Type = 'DynamicScreen'\r\n\tLEFT JOIN dbo.TemplateItem tiPS ON tiPS.TemplateItemId = tiS.ParentItem\r\n\tLEFT JOIN dbo.TemplateItem tiPT ON tiPT.TemplateItemId = tiPS.ParentItem\r\n\tLEFT JOIN dbo.RoadmapTemplate rt ON rt.RoadmapTemplateId = tiS.RoadmapTemplateId\r\nWHERE\r\n    Moniker = @DataFieldMoniker",
+  "placeholders": [
+    {
+      "name": "Moniker",
+      "defaultValue": null
+    }
+  ]
+}

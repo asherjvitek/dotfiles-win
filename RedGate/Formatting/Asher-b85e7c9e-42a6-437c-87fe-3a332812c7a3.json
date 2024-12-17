@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "id": "b85e7c9e-42a6-437c-87fe-3a332812c7a3",
+    "name": "Asher"
+  },
+  "whitespace": {
+    "newLines": {
+      "preserveExistingEmptyLinesAfterBatchSeparator": false,
+      "alignMultilineCommentsMatchingPatterns": true
+    }
+  },
+  "lists": {
+    "placeFirstItemOnNewLine": "always",
+    "alignAliases": true,
+    "alignComments": true
+  },
+  "parentheses": {
+    "parenthesisStyle": "expandedToStatement",
+    "indentParenthesesContents": true,
+    "collapseParenthesesShorterThan": 78,
+    "addSpacesAroundParentheses": false
+  },
+  "casing": {
+    "reservedKeywords": "uppercase",
+    "builtInFunctions": "uppercase",
+    "builtInDataTypes": "uppercase",
+    "useObjectDefinitionCase": true
+  },
+  "dml": {
+    "addNewLineAfterDistinctAndTopClauses": true,
+    "collapseStatementsShorterThan": 75,
+    "collapseSubqueriesShorterThan": 75,
+    "listItems": {
+      "placeFromTableOnNewLine": "always",
+      "placeWhereConditionOnNewLine": "always",
+      "placeGroupByAndOrderByOnNewLine": "always"
+    }
+  },
+  "ddl": {
+    "parenthesisStyle": "expandedToStatement",
+    "indentParenthesesContents": true,
+    "alignDataTypesAndConstraints": true,
+    "placeConstraintsOnNewLines": true,
+    "indentClauses": true,
+    "collapseStatementsShorterThan": 75
+  },
+  "controlFlow": {
+    "collapseStatementsShorterThan": 78
+  },
+  "cte": {
+    "parenthesisStyle": "expandedToStatement",
+    "indentContents": true,
+    "columnAlignment": "indented",
+    "placeAsOnNewLine": false
+  },
+  "variables": {
+    "alignDataTypesAndValues": false,
+    "placeEqualsSignOnNewLine": true
+  },
+  "joinStatements": {
+    "join": {
+      "keywordAlignment": "toTable"
+    },
+    "on": {
+      "placeOnNewLine": false,
+      "keywordAlignment": "indented",
+      "conditionAlignment": "indented"
+    }
+  },
+  "insertStatements": {
+    "values": {
+      "indentContents": true
+    }
+  },
+  "functionCalls": {
+    "placeArgumentsOnNewLines": "never"
+  },
+  "caseExpressions": {
+    "placeExpressionOnNewLine": false,
+    "collapseCaseExpressionsShorterThan": 75
+  },
+  "operators": {
+    "andOr": {
+      "alignment": "toFirstListItem"
+    },
+    "in": {
+      "alignment": "indented",
+      "placeFirstValueOnNewLine": "ifLongerThanMaxLineLength",
+      "addSpaceAroundInContents": true
+    }
+  }
+}

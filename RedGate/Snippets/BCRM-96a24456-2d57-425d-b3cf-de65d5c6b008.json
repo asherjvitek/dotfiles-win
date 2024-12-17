@@ -1,0 +1,6 @@
+{
+  "id": "96a24456-2d57-425d-b3cf-de65d5c6b008",
+  "prefix": "BCRM",
+  "description": "BEGIN COMMIT ROLLBACK MANUAL",
+  "body": "BEGIN TRAN\r\n--COMMIT TRAN \r\n--ROLLBACK TRAN\r\n"
+}

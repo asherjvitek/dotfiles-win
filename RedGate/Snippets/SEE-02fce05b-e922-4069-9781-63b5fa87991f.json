@@ -1,0 +1,12 @@
+{
+  "id": "02fce05b-e922-4069-9781-63b5fa87991f",
+  "prefix": "SEE",
+  "description": "SELECT ELmah_Error",
+  "body": "SELECT CONVERT(DATETIME, SWITCHOFFSET(CONVERT(DATETIMEOFFSET, TimeUtc), DATENAME(TzOffset, SYSDATETIMEOFFSET()))),* FROM dbo.ELMAH_Error WHERE ErrorId = '$ID$'",
+  "placeholders": [
+    {
+      "name": "ID",
+      "defaultValue": null
+    }
+  ]
+}

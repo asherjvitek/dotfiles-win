@@ -1,0 +1,6 @@
+{
+  "id": "fb27298a-67a0-4d28-8a0b-e84b558ee2be",
+  "prefix": "ST1EE",
+  "description": "SELECT TOP 100 ELMAH_Error",
+  "body": "SELECT TOP 100 CONVERT(DATETIME, SWITCHOFFSET(CONVERT(DATETIMEOFFSET, TimeUtc), DATENAME(TzOffset, SYSDATETIMEOFFSET()))), * FROM dbo.ELMAH_Error ORDER BY TimeUtc DESC"
+}

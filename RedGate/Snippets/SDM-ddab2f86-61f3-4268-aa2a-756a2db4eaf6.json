@@ -1,0 +1,12 @@
+{
+  "id": "ddab2f86-61f3-4268-aa2a-756a2db4eaf6",
+  "prefix": "SDM",
+  "description": "SELECT DataField Moniker",
+  "body": "SELECT\r\n    *\r\nFROM\r\n    dbo.DataField df\r\n    LEFT JOIN dbo.DataFieldMapping dfm ON dfm.DataFieldId = df.DataFieldId\r\nWHERE \r\n\tdf.FieldMoniker = '$FieldMoniker$'",
+  "placeholders": [
+    {
+      "name": "FieldMoniker",
+      "defaultValue": null
+    }
+  ]
+}

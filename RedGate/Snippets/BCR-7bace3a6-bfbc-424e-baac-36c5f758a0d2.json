@@ -1,0 +1,16 @@
+{
+  "id": "7bace3a6-bfbc-424e-baac-36c5f758a0d2",
+  "prefix": "BCR",
+  "description": "BEGIN COMMIT ROLLBACK",
+  "body": "BEGIN TRAN\r\n$sql$\r\nIF @@ROWCOUNT = $expected$\r\nCOMMIT TRAN ELSE ROLLBACK TRAN",
+  "placeholders": [
+    {
+      "name": "expected",
+      "defaultValue": null
+    },
+    {
+      "name": "sql",
+      "defaultValue": null
+    }
+  ]
+}

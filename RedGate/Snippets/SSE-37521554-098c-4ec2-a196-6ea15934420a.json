@@ -1,0 +1,12 @@
+{
+  "id": "37521554-098c-4ec2-a196-6ea15934420a",
+  "prefix": "SSE",
+  "description": "SELECT ScriptError",
+  "body": "DECLARE @ErrorID INT\r\nSET @ErrorID = $ID$\r\n\r\nSELECT * FROM dbo.ScriptErrors WHERE Err_id = @ErrorID\r\nSELECT * FROM dbo.SprocParams WHERE Err_id = @ErrorID\r\nSELECT * FROM dbo.FormData WHERE Err_id = @ErrorID\r\nSELECT * FROM dbo.QSData WHERE Err_id = @ErrorID",
+  "placeholders": [
+    {
+      "name": "ID",
+      "defaultValue": null
+    }
+  ]
+}

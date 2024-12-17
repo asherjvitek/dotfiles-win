@@ -1,0 +1,12 @@
+{
+  "id": "71e312c9-f979-48d4-86a6-73f3dffd80a1",
+  "prefix": "FDO",
+  "description": "Find document_order",
+  "body": "SELECT TOP (100)\r\n    *\r\nFROM\r\n    dbo.document_orders do\r\nWHERE\r\n    do.do_document_category LIKE '%$category$%'\r\nORDER BY\r\n    do.do_id DESC;",
+  "placeholders": [
+    {
+      "name": "category",
+      "defaultValue": null
+    }
+  ]
+}
