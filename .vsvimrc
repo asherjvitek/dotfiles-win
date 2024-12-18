@@ -6,9 +6,17 @@ nmap <leader>rt :vsc TestExplorer.RunAllTestsInContext<CR>
 nmap <leader>ra :vsc TestExplorer.RunAllTests<CR>
 nmap <leader>rT :vsc TestExplorer.DebugAllTestsInContext<CR>
 
+"This lets me have the same completetions for vs and nvim. Kinda jank but...
+inoremap <C-Y> <tab>
+" Right now to make these work we need to configure these in VS and not in
+" here.
+" imap <C-N> :vsc Edit.LineUp<CR>
+" imap <C-P> :vsc Edit.LineDown<CR>
+
 nmap <leader>yp :vsc File.CopyFullPath<CR>
 
 nmap <leader>sf :vsc Edit.GoToFile<CR>
+nmap <leader>ws :vsc Edit.GoToMember<CR>
 nmap <leader>sg :vsc Edit.FindinFiles<CR>
 
 nmap gr :vsc Edit.FindAllReferences<CR>
