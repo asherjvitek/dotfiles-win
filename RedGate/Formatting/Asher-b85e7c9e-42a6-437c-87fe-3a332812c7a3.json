@@ -10,9 +10,7 @@
     }
   },
   "lists": {
-    "placeFirstItemOnNewLine": "always",
-    "alignAliases": true,
-    "alignComments": true
+    "placeFirstItemOnNewLine": "always"
   },
   "parentheses": {
     "parenthesisStyle": "expandedToStatement",
