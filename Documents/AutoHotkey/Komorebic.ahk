@@ -8,18 +8,22 @@ Komorebic(cmd) {
 #+q::Komorebic("close")
 #m::Komorebic("minimize")
 
-; We need these for things like SSMS because it is dumb and other things likely need a little hand holding
 #+m::Komorebic("manage")
 #+u::Komorebic("unmanage")
 
 ; Focus windows
-#Left::Komorebic("focus left")
+#Left::{
+    Komorebic("focus left")
+    ;This is a hack for working in tabbed mode
+    Komorebic("cycle-stack previous")
+}
 #Down::Komorebic("focus down")
 #Up::Komorebic("focus up")
-#Right::Komorebic("focus right")
-
-; #+[::Komorebic("cycle-focus previous")
-; #+]::Komorebic("cycle-focus next")
+#Right::{
+    Komorebic("focus right")
+    ;This is a hack for working in tabbed mode
+    Komorebic("cycle-stack next")
+}
 
 ; Move windows
 #+Left::Komorebic("move left")
@@ -27,14 +31,16 @@ Komorebic(cmd) {
 #+Up::Komorebic("move up")
 #+Right::Komorebic("move right")
 
-; Stack windows
-#!Left::Komorebic("stack left")
-#!Down::Komorebic("stack down")
-#!Up::Komorebic("stack up")
-#!Right::Komorebic("stack right")
-#u::Komorebic("unstack")
-#p::Komorebic("cycle-stack previous")
-#n::Komorebic("cycle-stack next")
+; Tab Mode
+#s::{
+    Komorebic("toggle-window-container-behaviour")
+    Komorebic("stack-all")
+}
+#u::{
+    Komorebic("toggle-window-container-behaviour")
+    Komorebic("unstack-all")
+    Komorebic("retile")
+}
 
 ; Resize
 #=::Komorebic("resize-axis horizontal increase")
