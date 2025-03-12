@@ -36,7 +36,8 @@
                 },
                 {
                     "name": "3",
-                    "layout": "Columns"
+                    "layout": "Columns",
+                    "window_container_behaviour": "Append"
                 },
                 {
                     "name": "4",

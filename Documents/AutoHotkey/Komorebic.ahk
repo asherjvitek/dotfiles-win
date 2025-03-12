@@ -33,11 +33,11 @@ Komorebic(cmd) {
 
 ; Tab Mode
 #s::{
-    Komorebic("toggle-window-container-behaviour")
+    Komorebic("toggle-workspace-window-container-behaviour")
     Komorebic("stack-all")
 }
 #u::{
-    Komorebic("toggle-window-container-behaviour")
+    Komorebic("toggle-workspace-window-container-behaviour")
     Komorebic("unstack-all")
     Komorebic("retile")
 }
