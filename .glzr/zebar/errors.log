@@ -1,0 +1,6 @@
+[2m2025-07-22T13:51:34.987520Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget named 'test' found in widget pack 'glzr-io.starter'.
+[2m2025-07-22T14:52:56.572058Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'asher'.
+[2m2025-07-22T15:05:54.320088Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'asher'.
+[2m2025-07-22T15:09:50.433051Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'asher'.
+[2m2025-07-22T15:19:23.101288Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'asher'.
+[2m2025-07-22T15:20:28.108793Z[0m [31mERROR[0m [2mzebar::widget_factory[0m[2m:[0m Failed to start widget on startup: No widget pack found for 'asher'.
