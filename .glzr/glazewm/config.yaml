@@ -136,6 +136,11 @@ window_rules:
       # Ignores any Zebar windows.
       - window_process: { equals: 'zebar' }
 
+      # - window_process: { equals: 'devenv'}
+      #   window_title: { regex: '^Source Control Merge Wizard'}
+      # - window_process: { equals: 'devenv'}
+      #   window_title: { equals: 'Search'}
+
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
         window_class: { regex: 'Chrome_WidgetWin_1|MozillaDialogClass' }
@@ -217,16 +222,16 @@ keybindings:
 
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
-  - commands: ['toggle-tiling-direction']
-    bindings: ['rwin+v', 'lwin+v']
+  # - commands: ['toggle-tiling-direction']
+  #   bindings: ['rwin+v', 'lwin+v']
 
   # Change focus from tiling windows -> floating -> fullscreen.
   # - commands: ['wm-cycle-focus']
   #   bindings: ['rwin+space', 'lwin+space']
 
   # Change the focused window to be floating.
-  - commands: ['toggle-floating --centered']
-    bindings: ['rwin+space', 'lwin+space']
+  # - commands: ['toggle-floating --centered']
+  #   bindings: ['rwin+shift+f', 'lwin+shift+f']
 
   # Change the focused window to be tiling.
   - commands: ['toggle-tiling']
@@ -250,7 +255,7 @@ keybindings:
 
   # Re-evaluate configuration file.
   - commands: ['wm-reload-config']
-    bindings: ['alt+shift+r']
+    bindings: ['alt+shift+r', 'lwin+shift+r', 'rwin+shift+r']
 
   # Redraw all windows.
   - commands: ['wm-redraw']
